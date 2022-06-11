@@ -1,0 +1,3 @@
+Olá. Fiz esse site baseado na página " genshinbuild.id " com as builds do jogo Genshin Impact. Todas as imagens usadas neste site pertencem a ©Mihoyo e a ©Hoyoverse. O principal motivo pelo qual fiz este site foi para treinar flexbox (posicionamento dos elementos no geral, flexbox e grid) e mediaquerries. Essa é a 3ª versão do site, porém, as 1ª e 2ª não estão disponíveis, pois eu refiz tudo. 
+
+<img src="https://pbs.twimg.com/media/FIhOSk6VkAAC7nT?format=png&name=small">

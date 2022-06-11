@@ -1,0 +1,1280 @@
+/*======================================== Resets ========================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/*======================================== Variáveis ========================================*/
+
+:root {
+    /* Cor do Background */
+
+    --base-color: linear-gradient(90deg, hsl(0, 0%, 5%), hsl(0, 0%, 8%), hsl(0, 0%, 11%));
+
+    /* Cores dos Elementos */
+    --pyro: #ed2207;
+    --hydro: #00a1ff;
+    --anemo: #00ac8e;
+    --electro: #c043ff;
+    --dendro: #1db000;
+    --cryo: #21b8c3;
+    --geo: #feae00;
+
+    /* QUALIDADE das armas/artefatos */
+    --1_star: #7d8795;
+    --2_star: #598f6d;
+    --3_star: #4a9aaf;
+    --4_star: #b484c6;
+    --5_star: #dba151;
+}
+
+/*======================================== Base ========================================*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font: 400 1rem "Rubik", sans-serif ;
+    background: var(--base-color);
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*======================================== Layout da página principal ========================================*/
+/*Botão " Genshin Build BR "*/
+#home { 
+    margin: 0.5rem 0 0.5rem 0.5rem;
+
+    border: 0.13rem solid white;
+    border-radius: 0.25rem;
+    
+    padding: 0.3rem;
+
+    text-shadow: 0.125rem 0.125rem 0.125rem black;
+    box-shadow: 0.125rem 0.125rem 0.125rem black;
+
+    width: 8rem;
+}
+
+#home h1 {
+    font: 700 1rem "Rubik", sans-serif;
+    color: white;
+}
+
+#home img {
+    width: 2rem;
+    height: 2rem;
+    clip-path: circle();
+}
+
+#home a {
+    display: flex;
+    gap: 0.3rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#home h1 #span1 {
+    color: hsl(142, 100%, 30%);
+}
+
+#home h1 #span2 {
+    color: hsl(53, 100%, 50%);
+}
+
+/*Container principal*/
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 1rem;
+
+    margin: auto;
+}   
+
+/*Container do personagem*/
+.char_container {
+    width: 10rem;
+
+    margin: 1.25rem 0 0.5rem 0;
+    padding: 0.2rem;
+
+    text-align: center;
+}
+
+/*Imagem do personagem no container*/
+.char_container img {
+    width: 9rem;
+    height: 9rem;
+}
+
+/*Título que tem o nome do personagem. ex: Albedo*/
+.char_title {
+    font: 500 0.9rem "Rubik", sans-serif;
+    color: white;
+    -webkit-font-smoothing: auto;
+
+    text-shadow: 0.125rem 0.125rem 0.125rem black;
+    
+}
+
+/*Título informando quais build estão disponíveis para o personagem. ex: "Sub DPS"*/
+.char_container h4 {
+    font: 400 0.5rem "Rubik", sans-serif;
+    color: white;
+}
+
+/* Personagem indisponível */
+.char_unavaliable {
+    opacity: 0.5;
+}
+/* Elemento indisponível */
+.element_unavaliable {
+    opacity: 0.7;
+}
+
+/* Footer */
+#footer {
+    height: 7rem;
+
+}
+
+#footer .footer_container {
+    margin-left: 1rem;
+    margin-top: 3rem;
+
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+}
+
+#footer .footer_container h2 {
+    font: 500 1.2rem "Rubik", sans-serif;
+}
+#footer .logo {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#footer .logo a {
+    margin-bottom: 0.9rem;
+}
+
+#footer small {
+    color: white;
+}
+
+/*======================================== Layout da página do personagem ========================================*/
+/* Sessão do nome + função + imagem do personagem */
+.page_char_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    margin: 2rem 0 0 0;
+}
+
+.page_char_section h2, h3 {
+    color: white;
+}
+
+.page_char_title {
+    font: 500 0.9rem "Rubik", sans-serif;
+    color: white;
+    -webkit-font-smoothing: auto;
+
+    text-shadow: 0.125rem 0.125rem 0.125rem black;
+}
+
+.page_char_title h3 {
+    font: 400 0.7rem "Rubik", sans-serif;
+    color: white;
+
+    text-shadow: 0.125rem 0.125rem 0.125rem black;
+}
+
+.page_char_image img {
+    width: 13rem;
+    height: 13rem;
+}
+
+.page_section_title {
+    font: 400 0.8rem "Rubik", sans-serif;
+    margin-left: 1rem;
+
+    text-shadow: 0.125rem 0.125rem 0.125rem black;
+}
+
+.page_section_subtitle {
+    font: 400 0.6rem "Rubik", sans-serif;
+    
+    margin: 1.3rem 0 1rem 1.3rem;
+
+    text-shadow: 0.125rem 0.125rem 0.125rem black;
+}
+
+/* Sessão das armas */
+.page_weapon_container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+    gap: 0.5rem;
+
+    margin: 1rem 2rem;
+
+    text-align: center;
+}
+
+.page_weapon_item {
+    width: 5rem;
+    height: 7.8rem;
+    margin: 0.7rem 0.3rem;
+    text-align: center;
+}
+
+.page_weapon_item img {
+    width: 4rem;
+    height: 4rem;
+    padding: 0.1rem;
+}
+
+.page_weapon_item h4 {
+    font: 400 0.5rem "Rubik", sans-serif;
+    margin-bottom: 0.3rem;
+}
+
+.page_weapon_item h5 {
+    font: 400 0.4rem "Rubik", sans-serif;
+}
+
+.page_item_best {
+    text-align: left;
+
+    margin-top: 0.1rem;
+    margin-left: 0.3rem;
+    
+    font-style: italic;
+    font-size: 0.4rem;
+}
+
+/* Sessão dos artefatos */
+.page_artifact_container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+
+    margin: 1rem auto;
+
+    text-align: center;
+}
+
+.page_artifact_item {
+    width: 4.5rem;
+    height: 8rem;
+    margin: 0.5rem 0.5rem;
+}
+
+.page_artifact_item_double {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem;
+
+    width: 9rem;
+    height: 7rem;
+    margin: 0.5rem 0.5rem;
+    
+}
+
+.page_artifact_subitem {
+    width: 3rem;
+    height: 7rem;
+}
+
+.page_artifact_subitem img {
+    width: 3rem;
+    height: 3rem;
+}
+.page_artifact_item img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.page_artifact_item h4,
+.page_artifact_item_double h4 {
+    font: 400 0.5rem "Rubik", sans-serif;
+    margin-bottom: 0.3rem;
+}
+
+.page_artifact_item h5,
+.page_artifact_item_double h5  {
+    font: 400 0.47rem "Rubik", sans-serif;
+}
+
+/* Sessão dos status que os artefatos precisam ter */
+.page_priority_container {
+    margin: 0.5rem auto;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 18rem;
+
+}
+
+.page_priority_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 18rem;
+    
+    text-align: center;
+}
+
+.page_priority_subitem {
+    width: 10rem;
+    margin: 0.7rem;
+}
+
+.page_priority_subitem img {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.page_priority_subitem h4 {
+    font: 400 0.8rem "Rubik", sans-serif;
+    margin-bottom: 0.1rem;
+}
+
+.page_priority_subitem h5 {
+    font: 400 0.6rem "Rubik", sans-serif;
+}
+
+/* Sessão da prioridade dos elementos */
+.page_talent_container {
+    margin: 0.8rem auto 2.8rem auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.5rem;
+}
+
+.page_talent_item {
+    display: inline;
+    text-align: center;
+    width: 6rem;
+}
+
+.page_talent_item img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.page_talent_item h4 {
+    font: 400 0.6rem "Rubik", sans-serif;
+    margin-bottom: 0.4rem;
+}
+
+.page_talent_item h5 {
+    font: 400 0.5rem "Rubik", sans-serif;
+}
+
+.page_talent_greaterthan {
+    font-size: 1.5rem;
+}
+
+/* Sessão de personagens recomendados */
+.page_comp_container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 0.5rem;
+
+    margin: auto;
+}
+
+.page_comp_item {
+    width: 8rem;
+    margin: 1.25rem 0 1.5rem 0;
+    padding: 0.2rem;
+    text-align: center;
+}
+
+.page_comp_item img {
+    width: 6.5rem;
+    height: 6.5rem;
+}
+
+.page_comp_item h4 {
+    font: 400 0.9rem "Rubik", sans-serif;
+    color: white;
+
+    text-shadow: 0.125rem 0.125rem 0.125rem black;
+
+}
+
+/*======================================== Botão de voltar ao início ========================================*/
+
+
+.back-to-top {
+    background: #e1e1e1;
+    color: black;
+
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+
+    padding: 0.5rem;
+    clip-path: circle();
+
+    font-size: 2.5rem;
+    line-height: 0;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: 0.4s;
+    transform: translateY(100%);
+}
+
+.back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*======================================== Bordas ========================================*/
+
+/* Elementos */
+.pyro {
+    border: 0.12rem solid var(--pyro);
+    border-radius: 0.325rem;
+}
+
+.hydro {
+    border:0.12rem solid var(--hydro);
+    border-radius: 0.325rem;
+}
+
+.anemo {
+    border: 0.12rem solid var(--anemo);
+    border-radius: 0.325rem;
+}
+
+.electro {
+    border: 0.12rem solid var(--electro);
+    border-radius: 0.325rem;
+}
+
+.dendro {
+    border: 0.12rem solid var(--dendro);
+    border-radius: 0.325rem;
+}
+
+.cryo {
+    border: 0.12rem solid var(--cryo);
+    border-radius: 0.325rem;
+}
+
+.geo {
+    border: 0.12rem solid var(--geo);
+    border-radius: 0.325rem;
+}
+
+/* Qualidade das armas/artefatos */
+.one_star {
+    border: 0.1rem solid var(--1_star);
+    border-radius: 5px;
+}
+
+.two_star {
+    border: 0.1rem solid var(--2_star);
+    border-radius: 0.325rem;
+}
+
+.three_star {
+    border: 0.1rem solid var(--3_star);
+    border-radius: 0.325rem;
+}
+
+.four_star {
+    border: 0.1rem solid var(--4_star);
+    border-radius: 0.325rem;
+}
+
+.five_star {
+    border: 0.1rem solid var(--5_star);
+    border-radius: 0.325rem;
+}
+
+/*======================================== Media Queries ========================================*/
+
+/* Dispositivos Médios: 767 > */
+@media (min-width: 767px) {
+    /*Container home*/
+    #home { 
+        margin: 0.5rem 0 0.5rem 0.5rem;
+        
+        border: 0.15rem solid white;
+        border-radius: 0.75rem;
+        
+        padding: 0.3rem;
+
+        text-shadow: 0.125rem 0.125rem 0.125rem black;
+        box-shadow: 0.125rem 0.125rem 0.125rem black;
+
+        width: 8rem;
+    }
+
+    #home h1 {
+        font: 700 1rem "Rubik", sans-serif;
+        color: white;
+    }
+
+    #home img {
+        width: 2rem;
+        height: 2rem;
+        clip-path: circle();
+    }
+
+    #home a {
+        display: flex;
+        gap: 0.3rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    /*Container principal*/
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        
+        margin: auto;
+
+        width: 80vw;
+    } 
+
+    /*Container do personagem*/
+    .char_container {
+        width: 9rem;
+        height: auto;
+        margin: 1rem;
+        padding: 0.2rem;
+        text-align: center;
+    }
+
+    /*Imagem do personagem no container*/
+    .char_container img {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    /*Título que tem o nome do personagem. ex: Albedo*/
+    .char_title {
+        font: 500 0.9rem "Rubik", sans-serif;
+        color: white;
+        -webkit-font-smoothing: auto;
+    }
+    
+    /*Título informando quais build estão disponíveis para o personagem. ex: "Sub DPS"*/
+    .char_container h4 {
+        font: 400 0.6rem "Rubik", sans-serif;
+        color: white;
+    }
+
+    /* Elementos */
+    .pyro {
+        border: 0.1rem solid var(--pyro);
+        border-radius: 0.325rem;
+    }
+
+    .hydro {
+        border:0.1rem solid var(--hydro);
+        border-radius: 0.325rem;
+    }
+
+    .anemo {
+        border: 0.1rem solid var(--anemo);
+        border-radius: 0.325rem;
+    }
+
+    .electro {
+        border: 0.1rem solid var(--electro);
+        border-radius: 0.325rem;
+    }
+
+    .dendro {
+        border: 0.1rem solid var(--dendro);
+        border-radius: 0.325rem;
+    }
+
+    .cryo {
+        border: 0.1rem solid var(--cryo);
+        border-radius: 0.325rem;
+    }
+
+    .geo {
+        border: 0.1rem solid var(--geo);
+        border-radius: 0.325rem;
+    }
+
+    /* Qualidade das armas/artefatos */
+    .one_star {
+        border: 3px solid var(--1_star);
+        border-radius: 5px;
+    }
+
+    .two_star {
+        border: 3px solid var(--2_star);
+        border-radius: 0.325rem;
+    }
+
+    .three_star {
+        border: 3px solid var(--3_star);
+        border-radius: 0.325rem;
+    }
+
+    .four_star {
+        border: 3px solid var(--4_star);
+        border-radius: 0.325rem;
+    }
+
+    .five_star {
+        border: 3px solid var(--5_star);
+        border-radius: 0.325rem;
+    }
+
+}
+
+
+/* Dispositivos Largos: 1023 > */
+@media (min-width: 1023px) {
+    /*Container home*/
+    #home { 
+        margin: 0.5rem 0 0.5rem 0.5rem;
+        
+        border: 0.15rem solid white;
+        border-radius: 0.75rem;
+        
+        padding: 0.3rem;
+    
+        text-shadow: 0.125rem 0.125rem 0.125rem black;
+        box-shadow: 0.125rem 0.125rem 0.125rem black;
+    
+        width: 8rem;
+    }
+    
+    #home h1 {
+        font: 700 1rem "Rubik", sans-serif;
+        color: white;
+    }
+    
+    #home img {
+        width: 2rem;
+        height: 2rem;
+        clip-path: circle();
+    }
+    
+    #home a {
+        display: flex;
+        gap: 0.3rem;
+        justify-content: space-between;
+        align-items: center;
+    }    
+
+    /*Container principal*/
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        
+        margin: auto;
+
+        width: 80vw;
+    } 
+
+    /*Container do personagem*/
+    .char_container {
+        width: 11rem;
+        height: auto;
+        margin: 1rem;
+        padding: 0.2rem;
+        text-align: center;
+    }
+
+    /*Imagem do personagem no container*/
+    .char_container img {
+        width: 9rem;
+        height: 9rem;
+    }
+
+    /*Título que tem o nome do personagem. ex: Albedo*/
+    .char_title {
+        font: 500 1.2rem "Rubik", sans-serif;
+        color: white;
+        -webkit-font-smoothing: auto;
+    }
+    
+    /*Título informando quais build estão disponíveis para o personagem. ex: "Sub DPS"*/
+    .char_container h4 {
+        font: 400 0.7rem "Rubik", sans-serif;
+        color: white;
+    }
+
+    /* Elementos */
+    .pyro {
+        border: 0.1rem solid var(--pyro);
+        border-radius: 0.325rem;
+    }
+
+    .hydro {
+        border:0.1rem solid var(--hydro);
+        border-radius: 0.325rem;
+    }
+
+    .anemo {
+        border: 0.1rem solid var(--anemo);
+        border-radius: 0.325rem;
+    }
+
+    .electro {
+        border: 0.1rem solid var(--electro);
+        border-radius: 0.325rem;
+    }
+
+    .dendro {
+        border: 0.1rem solid var(--dendro);
+        border-radius: 0.325rem;
+    }
+
+    .cryo {
+        border: 0.1rem solid var(--cryo);
+        border-radius: 0.325rem;
+    }
+
+    .geo {
+        border: 0.1rem solid var(--geo);
+        border-radius: 0.325rem;
+    }
+
+    /* Qualidade das armas/artefatos */
+    .one_star {
+        border: 3px solid var(--1_star);
+        border-radius: 5px;
+    }
+
+    .two_star {
+        border: 3px solid var(--2_star);
+        border-radius: 0.325rem;
+    }
+
+    .three_star {
+        border: 3px solid var(--3_star);
+        border-radius: 0.325rem;
+    }
+
+    .four_star {
+        border: 3px solid var(--4_star);
+        border-radius: 0.325rem;
+    }
+
+    .five_star {
+        border: 3px solid var(--5_star);
+        border-radius: 0.325rem;
+    }
+
+}
+
+/* Dispositivos Extra Largos(PC): 1200 > */
+@media (min-width: 1200px) {
+    /*Container home*/
+    #home { 
+        margin: 0.8rem 0 0.5rem 0.5rem;
+
+        border: 0.2rem solid white;
+        border-radius: 0.2rem;
+    
+        text-shadow: 0.125rem 0.125rem 0.125rem black;
+        box-shadow: 0.125rem 0.125rem 0.125rem black;
+    
+        width: 22.5rem;
+        height: auto;
+
+        padding-right: 0.5rem;
+    }
+    
+    #home h1 {
+        font: 700 2rem "Rubik", sans-serif;
+        color: white;
+    }
+    
+    #home img {
+        width: 4rem;
+        height: 4rem;
+        clip-path: circle();
+    }
+    
+    #home a {
+        display: flex;
+        gap: 0.3rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #home h1 #span1 {
+        color: hsl(142, 100%, 30%);
+    }
+
+    #home h1 #span2 {
+        color: hsl(53, 100%, 50%);
+    }
+    /*Container principal*/
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        gap: 1rem;
+    
+        margin: auto;
+
+        width: 80vw;
+    } 
+
+    /*Container do personagem*/
+    .char_container {
+        width: 25rem;
+        height: auto;
+
+        margin: 2.5rem;
+        padding: 0.4rem;
+        
+        text-align: center;
+    }
+
+    /*Imagem do personagem no container*/
+    .char_container img {
+        width: 22rem;
+        height: 22rem;
+    }
+
+    /*Título que tem o nome do personagem. ex: Albedo*/
+    .char_title {
+        font: 500 1.8rem "Rubik", sans-serif;
+        color: white;
+        -webkit-font-smoothing: auto;
+    }
+    
+    /*Título informando quais build estão disponíveis para o personagem. ex: "Sub DPS"*/
+    .char_container h4 {
+        font: 400 0.9rem "Rubik", sans-serif;
+        color: white;
+    }
+
+    /*======================================== Layout da página do personagem ========================================*/
+    
+    /* Sessão do nome + função + imagem do personagem */
+    .page_char_section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        margin: 2rem 0 0 0;
+        text-align: center;
+    }
+
+    .page_char_section h2, h3 {
+        color: white;
+    }
+
+    .page_char_title {
+        font: 500 3rem "Rubik", sans-serif;
+        color: white;
+        -webkit-font-smoothing: auto;
+
+        text-shadow: 0.125rem 0.125rem 0.125rem black;
+
+    }
+
+    .page_char_title h3 {
+        font: 400 1.5rem "Rubik", sans-serif;
+        color: white;
+
+        text-shadow: 0.125rem 0.125rem 0.125rem black;
+
+    }
+
+    .page_char_image img {
+        width: 23rem;
+        height: 23rem;
+    }
+
+    .page_section_title {
+        font: 400 1.5rem "Rubik", sans-serif;
+        margin-left: 4rem;
+
+        text-shadow: 0.125rem 0.125rem 0.125rem black;
+
+    }
+
+    .page_section_subtitle {
+        font: 400 1rem "Rubik", sans-serif;
+        margin-left: 4.3rem;
+    
+        text-shadow: 0.125rem 0.125rem 0.125rem black;
+    }
+
+    /* Sessão das armas */
+    .page_weapon_container {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+
+        margin: 4rem auto;
+        
+        text-align: center;
+    }
+
+    .page_weapon_item {
+        width: 15rem;
+        height: 18rem;
+        margin: 4rem 5rem;
+        text-align: center;
+    }
+
+    .page_weapon_item img {
+        width: 13rem;
+        height: 13rem;
+    }
+
+    .page_weapon_item h4 {
+        font: 400 1rem "Rubik", sans-serif;
+        margin-bottom: 0.3rem;
+    }
+
+    .page_weapon_item h5 {
+        font: 400 0.8rem "Rubik", sans-serif;
+    }
+
+    .page_item_best {
+        text-align: left;
+
+        margin-top: 0.1rem;
+        margin-left: 0.3rem;
+        
+        font-style: italic;
+        font-size: 1rem;
+    }
+
+    /* Sessão dos artefatos */
+    .page_artifact_container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-content: center;
+        margin: 4rem auto;
+        text-align: center;
+    }
+
+    .page_artifact_item {
+        width: 12rem;
+        height: 18rem;
+        margin: 4rem 10rem;
+    }
+
+    .page_artifact_item_double {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        order: 1, 2, 3, 4;
+
+        width: 26rem;
+        height: 18rem;
+        margin: 4rem 10rem;
+    }
+
+    .page_artifact_subitem {
+        width: 11rem;
+        height: 13rem;
+        
+    }
+
+    .page_artifact_subitem img {
+        width: 7rem;
+        height: 7rem;
+    }
+    .page_artifact_item img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .page_artifact_item h4,
+    .page_artifact_item_double h4 {
+        font: 400 1.2rem "Rubik", sans-serif;
+        margin-bottom: 1.5rem;
+    }
+
+    .page_artifact_item h5,
+    .page_artifact_item_double h5  {
+        font: 400 0.9rem "Rubik", sans-serif;
+    }
+
+    .page_artifact_span {
+        font-size: 2.5rem;
+    }
+
+    #page_artifact_title_change {
+        margin-bottom: 3rem;
+    }
+
+    /* Sessão dos status que os artefatos precisam ter */
+    .page_priority_container {
+        margin: 4rem auto;
+        
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        gap: 3rem;
+        
+        width: 90rem;
+
+    }
+
+    .page_priority_item {
+        display: grid;
+        gap: 1rem;
+
+        width: 16rem;
+        
+        text-align: center;
+    }
+
+    .page_priority_subitem img {
+        width: 4.3rem;
+        height: 4.3rem;
+    }
+
+    .page_priority_subitem h4 {
+        font: 400 1.35rem "Rubik", sans-serif;
+        margin-bottom: 0.1rem;
+    }
+
+    .page_priority_subitem h5 {
+        font: 400 1rem "Rubik", sans-serif;
+    }
+
+    /* Sessão da prioridade dos elementos */
+    .page_talent_container {
+        margin: 4rem auto;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        gap: 0.5rem;
+
+        width: 90rem;
+    }
+
+    .page_talent_item {
+        display: inline;
+        text-align: center;
+        width: 10rem;
+    }
+
+    .page_talent_item img {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .page_talent_item h4 {
+        font: 400 1.2rem "Rubik", sans-serif;
+        margin-bottom: 0.5rem;
+    }
+
+    .page_talent_item h5 {
+        font: 400 0.9rem "Rubik", sans-serif;
+    }
+
+    .page_talent_greaterthan {
+        font-size: 7.5rem;
+    }
+    /* Sessão de comps recomendadas */
+    .page_comp_container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+
+        margin: auto;
+
+        width: 80vw;
+    }
+
+    .page_comp_item {
+        width: 25rem;
+        height: auto;
+        margin: 1.25rem 0 1.5rem 0;
+        padding: 0.4rem;
+        text-align: center;
+    }
+
+    .page_comp_item img {
+        width: 22rem;
+        height: 22rem;
+    }
+
+    .page_comp_item h4 {
+        font: 400 1.8rem "Rubik", sans-serif;
+        color: white;
+
+        text-shadow: 0.125rem 0.125rem 0.125rem black;
+
+    }
+
+    #footer {
+        height: 7rem;
+    }
+    
+    #footer .footer_container {
+        margin-left: 2rem;
+        margin-top: 3rem;
+    
+        display: flex;
+        flex-flow: column wrap;
+        gap: 1rem;
+    }
+    
+    #footer .footer_container h2 {
+        font: 500 2rem "Rubik", sans-serif;
+    }
+
+    #footer .footer_container small {
+        font-size: 1rem;
+    }
+
+    #footer .logo {
+        color: white;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    #footer .logo a {
+        margin-bottom: 0.9rem;
+    }
+    
+    #footer small {
+        color: white;
+    }
+
+    .back-to-top {
+    background: #e1e1e1;
+    color: black;
+    
+        position: fixed;
+        right: 2rem;
+        bottom: 2rem;
+    
+        padding: 0.5rem;
+        clip-path: circle();
+    
+        font-size: 2.5rem;
+        line-height: 0;
+    
+        visibility: hidden;
+        opacity: 0;
+    
+        transition: 0.4s;
+        transform-origin: translateY(100%);
+    }
+    
+    .back-to-top.show {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Elementos */
+    .pyro {
+        border: 0.2rem solid var(--pyro);
+        border-radius: 0.5rem;
+    }
+
+    .hydro {
+        border:0.2rem solid var(--hydro);
+        border-radius: 0.5rem;
+    }
+
+    .anemo {
+        border: 0.2rem solid var(--anemo);
+        border-radius: 0.5rem;
+    }
+
+    .electro {
+        border: 0.2rem solid var(--electro);
+        border-radius: 0.5rem;
+    }
+
+    .dendro {
+        border: 0.2rem solid var(--dendro);
+        border-radius: 0.5rem;
+    }
+
+    .cryo {
+        border: 0.2rem solid var(--cryo);
+        border-radius: 0.5rem;
+    }
+
+    .geo {
+        border: 0.2rem solid var(--geo);
+        border-radius: 0.5rem;
+    }
+
+    /* Qualidade das armas/artefatos */
+    .one_star {
+        border: 3px solid var(--1_star);
+        border-radius: 5px;
+    }
+
+    .two_star {
+        border: 3px solid var(--2_star);
+        border-radius: 0.325rem;
+    }
+
+    .three_star {
+        border: 3px solid var(--3_star);
+        border-radius: 0.325rem;
+    }
+
+    .four_star {
+        border: 3px solid var(--4_star);
+        border-radius: 0.325rem;
+    }
+
+    .five_star {
+        border: 3px solid var(--5_star);
+        border-radius: 0.325rem;
+    }
+
+}
